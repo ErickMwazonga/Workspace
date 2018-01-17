@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Environment variables
+export WORKSPACE=`pwd`
+export DB_PASSWORD=migombani
+
+# Create/Activate virtualenv
+virtualenv venv
+source venv/bin/activate
+
+# Install Requirements
+pip install -r requirements.txt
+
+# Run tests
+python manage.py test
