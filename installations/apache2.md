@@ -1,5 +1,8 @@
 ## __Django Applications with Apache and mod_wsgi__
 
+### Resources
+1. [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-16-04)
+
 ### 1. Install Packages from the Ubuntu Repositories
     _Python2_
     sudo apt-get update
