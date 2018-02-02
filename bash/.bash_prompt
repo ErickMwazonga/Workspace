@@ -61,7 +61,6 @@ PS1="\[${orange}\]\u"; # orange user
 PS1+="\[${yellow}\]@\h "; # yellow host
 PS1+="\[${green}\]\w"; # green pwd
 PS1+="\[${orange}\]\$(parse_git_branch)\[${orange}\] "; # orange git
-PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
