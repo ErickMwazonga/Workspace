@@ -16,7 +16,8 @@ path = '/home/erick/apps/PhoneBookApplication/'
 if path not in sys.path:
     sys.path.append(path)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PhoneBookApplication.settings")
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PhoneBookApplication.settings")
+os.environ["DJANGO_SETTINGS_MODULE"] = "PhoneBookApplication.settings"
 
 application = get_wsgi_application()
 application = DjangoWhiteNoise(application)

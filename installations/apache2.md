@@ -36,9 +36,13 @@ NB: Use VirtalEnvWrapper
 
 
 ### 4. Configure Apache
-    sudo subl /etc/apache2/sites-available/000-default.conf
+    create file in project - deploy/project_apache
 
-> refer to services/apache_mod_wsgi/000-default.conf
+> Create Symbolic Links to point to /etc/apache2/sites-available and sites-enabled
+- `sudo ln -s ~/apps/project/deploy/project_apache.conf  /etc/apache2/sites-available/`
+- `sudo ln -s ~/apps/project/deploy/project_apache.conf  /etc/apache2/sites-enabled/`
+
+> refer to services/apache_mod_wsgi/project_apache.conf
 
 
 ### 5. Wrapping Up Some Permissions Issues
