@@ -46,7 +46,7 @@ Open the `/etc/supervisor/supervisord.conf` file and check its contents. You wil
 To add programs to be managed by supervisor we just need to create the appropriate [program] sections. However, to avoid messing arround with the main configuration file every time we need to add (or change) a program, we will be using the [include] section. Find this section, uncomment it and then edit it to look like the following.
 
     [include]
-    files=conf.d/\*.conf
+    files=conf.d/*.conf
 
 Now for each program we want to add, we will be creating a .ini file inside the /etc/supervisor/conf.d/ directory. Lets create this folder.
 
@@ -224,7 +224,7 @@ To allow access to the supervisord webserver, open the supervisord configuration
 Now update this section's configuration with the following.
 
     [inet_http_server]
-    port=\*:9001
+    port=*:9001
     username=your_username
     password=your_password
 
