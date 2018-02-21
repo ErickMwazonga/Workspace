@@ -14,7 +14,7 @@ Supervisor is a client/server system used to control a number of UNIX processes,
 
 
 ### Installation and basic configuration
-First, update your local packages list and then install python setuptools.
+First, update your local packages list and then install python `setuptools`.
 
     sudo apt-get update && sudo apt-get install python-setuptools
 
@@ -30,7 +30,7 @@ And then execute the following.
 
     echo_supervisord_conf >  /etc/supervisor/supervisord.conf
 
-If you aren't logged in with the root user, you may get a Permission denied error (even with sudo). This is due to the redirection. To overcome this, login as root.
+If you aren't logged in with the root user, you may get a `Permission denied` error (even with `sudo`). This is due to the redirection. To overcome this, login as `root`.
 
     sudo su
 
@@ -55,7 +55,7 @@ Now for each program we want to add, we will be creating a .ini file inside the 
 
 ### Starting the supervisor server
 
-As noted before, supervisor is composed of a server and clients that connect to it. To be able to manage and control programs, we need to start the server. To do so, we will be registering the supervisor server in systemd, so that the server may be started at system startup.
+As noted before, supervisor is composed of a server and clients that connect to it. To be able to manage and control programs, we need to start the server. To do so, we will be registering the supervisor server in `systemd`, so that the server may be started at system startup.
 
 To do so, create a file called `supervisord.service` in the `/etc/systemd/system` directory.
 
@@ -98,7 +98,7 @@ Also, you can check out the logs.
 
 ### Adding programs
 
-The programs controlled by supervisor are given by different [program] sections in the configuration. For each program we want to manage, we will create a standalone configuration file informing the command executable path, any environmental variables, how to perform in case of a shutdown.
+The programs controlled by supervisor are given by different `[program]` sections in the configuration. For each program we want to manage, we will create a standalone configuration file informing the command executable path, any environmental variables, how to perform in case of a shutdown.
 
 First, let's create a simple script that logs a timestamp. Create a file called `hello_supervisor.sh` (anywhere you wish, we will be referencing the full path of this script).
 
@@ -159,12 +159,12 @@ These lines define the logfile location for `stderr` and `stdout`, respectively.
 
 Now that we have installed and configured supervisor, we are able to manage our processes.
 
-After adding a new program, we should run the following two commands, to inform the server to reread the configuration files and to apply any changes.
+After adding a new program, we should run the following two commands, to inform the server to `reread` the configuration files and to apply any changes.
 
     sudo supervisorctl reread
     sudo supervisroctl update
 
-Now execute the supervisorctl client.
+Now `execute` the supervisorctl client.
 
     sudo supervisorctl
 
@@ -173,7 +173,7 @@ You will be greeted with a `list` of the registered proccesses. You will see a p
     hello_supervisor                 RUNNING   pid 6853, uptime 0:22:30
     supervisor>
 
-Type help for a list of avaialable commands.
+Type `help` for a list of avaialable commands.
 
 `supervisor> help`
 
