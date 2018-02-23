@@ -2,6 +2,7 @@
 
 ### Resources
 1. [Vultr Tutorial](https://www.vultr.com/docs/installing-and-configuring-supervisor-on-ubuntu-16-04)
+2. [Resource 2](https://serversforhackers.com/c/monitoring-processes-with-supervisord)
 
 ### Definition
 Supervisor is a client/server system used to control a number of UNIX processes, more specifically processes related to a project or a customer. For example, you could use supervisor to spawn and monitor an arbitrary number of worker queues of your web application.
