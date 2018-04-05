@@ -1,8 +1,9 @@
 ## How To Set Up Django with Postgres, Nginx, and Gunicorn
 
 ### Resources
-1. [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04)
-2. [A good resource](https://blog.khophi.co/postgresql-django-nginx-gunicorn-virtualenvwrapper-16-04-lts-ubuntu-server/)
+1. [Medium](https://hackernoon.com/deploy-django-app-with-nginx-gunicorn-postgresql-supervisor-9c6d556a25ac)
+2. [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04)
+3. [A good resource](https://blog.khophi.co/postgresql-django-nginx-gunicorn-virtualenvwrapper-16-04-lts-ubuntu-server/)
 
 
 ### Install the Packages from the Ubuntu Repositories
