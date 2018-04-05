@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# NGINX + GUNICORN + SUPERVISOR
+# ============================================
+
+ME="root"
+DJANGODIR=/home/erick/apps/PhoneBookApplication/ # django app dir
+SOCKFILE=/home/erick/apps/PhoneBookApplication/gunicorn.sock # your sock file - do not create it manually
+USER=erick
+GROUP=webapps
+NUM_WORKERS=3
+DJANGO_SETTINGS_MODULE=PhoneBookApplication.settings
+DJANGO_WSGI_MODULE=PhoneBookApplication.wsgi
+echo "Starting $NAME as `whoami`"
+
+# Activate the virtual environment
+cd $DJANGODIR
+
+source /home/erick/.virtualenvs/phonebook/bin/activate
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+# Create the run directory if it doesn't exist
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR
+
+# Start your Django Gunicorn
+# Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
+exec /home/erick/.virtualenvs/phonebook/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/erick/apps/PhoneBookApplication/PhoneBookApplication.sock PhoneBookApplication.wsgi:application
+
+
+# DYNAMIC CONFIGURATIONS
+# ------------------------------------
+# exec /home/erick/.virtualenvs/phonebook/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+#  --name root \
+#  --workers $NUM_WORKERS \
+#  --user=$USER --group=$GROUP \
+#  --bind=unix:$SOCKFILE \
+#  --log-level=debug \
+#  --log-file=-
