@@ -35,6 +35,17 @@ alias glp='git shortlog'
 # Python
 alias dserver='python manage.py runserver'
 
+# Laravel
+alias serve="php artisan serve"    
+alias test="vendor/bin/phpunit"
+alias cu='composer update'
+alias ci='composer install'
+alias cdo="composer dump-autoload -o"
+alias vu='vagrant up'
+alias vs='vagrant ssh'
+alias wakeup='cd ~/Homestead && vagrant up && vagrant ssh'
+alias cclear='php artisan cache:clear'
+
 
 # Vagrant.
 alias vg="vagrant"
