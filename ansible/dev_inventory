@@ -1,0 +1,12 @@
+[loadbalancer]
+lb01 ansible_host=192.168.33.10
+
+[webserver]
+app01 ansible_host=192.168.33.11
+app02 ansible_host=192.168.33.12
+
+[database]
+db01 ansible_host=192.168.33.13
+
+[control]
+control ansible_connection=local
