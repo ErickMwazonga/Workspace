@@ -16,6 +16,8 @@ alias d='cd ~/Desktop'
 alias dl='cd ~/Downloads'
 alias dc='cd ~/Documents'
 
+# https://github.com/sharkdp/bat
+alias cat='bat'
 
 # Git.
 # --------------------------
@@ -72,3 +74,6 @@ alias cclear='php artisan cache:clear'
 alias dc='docker-compose'
 alias dm='docker-machine'
 alias vgbl="vagrant box list"
+
+# Pgadmin4
+alias pgadmin4='~/pgAdmin4/pgadmin4.sh'
