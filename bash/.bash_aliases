@@ -41,6 +41,8 @@ alias glp='git shortlog'
 
 # Python
 # --------------------------
+alias python='python3'
+alias pip='pip3'
 alias dserver='python manage.py runserver'
 
 
