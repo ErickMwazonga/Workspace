@@ -17,7 +17,7 @@ alias dl='cd ~/Downloads'
 alias dc='cd ~/Documents'
 
 # https://github.com/sharkdp/bat
-alias cat='bat'
+# alias cat='bat'
 
 # Git.
 # --------------------------
