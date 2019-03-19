@@ -81,13 +81,13 @@ alias dl="docker ps -l -q" # Get latest container ID
 alias dps="docker ps" # Get container process
 alias dpa="docker ps -a" # Get process included stop container
 alias di="docker images" # Get images
-dri() { docker rmi $(docker images -q); } # Remove all images
-alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'" # Get container IP
-alias dkd="docker run -d -P" # Run deamonized container, e.g., $dkd base /bin/echo hello
-alias dki="docker run -i -t -P" # Run interactive container, e.g., $dki base /bin/bash
-alias dex="docker exec -i -t" # Execute interactive container, e.g., $dex base /bin/bash
-dstop() { docker stop $(docker ps -a -q); } # Stop all containers
-drm() { docker rm $(docker ps -a -q); } # Remove all containers
+alias qdocker='rmi $(docker images -q)' # Remove all images
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'" # Get container Ip
+alias dkd="docker run -d -P" # Run deamonized container
+alias dki="docker run -i -t -P" # Run interactive container, 
+alias dex="docker exec -i -t" # Execute interactive container
+alias dstop='docker stop $(docker ps -a -q)' # Stop all containers
+alias drm='docker rm $(docker ps -a -q)' # Remove all containers
 alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)' # Stop and Remove all containers
 
 # Pgadmin4
