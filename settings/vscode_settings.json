@@ -1,0 +1,21 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.lineHeight": 28,
+    "workbench.iconTheme": "material-icon-theme",
+    "python.jediEnabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.~lock.*": true,
+        "**/.vscode": true,
+        "**/*.pyc": true
+    },
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+}
+
+// sudo apt install fonts-firacode
