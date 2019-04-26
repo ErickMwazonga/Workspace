@@ -1,0 +1,25 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.lineHeight": 28,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "python.jediEnabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.~lock.*": true,
+        "**/.vscode": true,
+        "**/*.pyc": true
+    },
+    "editor.fontFamily": "Fira Code", // sudo apt install fonts-firacode
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+}
